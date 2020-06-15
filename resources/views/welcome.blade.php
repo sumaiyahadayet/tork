@@ -187,8 +187,7 @@
               </div>
             </div>
           </section>
-<!-- agency banner section -->
-<!-- agency banner section -->
+
 <section class="xs-section-padding waypoint-tigger">
   <div class="banner-slider-area">
     <div class="application-slider owl-carousel">
@@ -824,7 +823,7 @@
         </div>
    @endforeach
 
-        
+
       </div>
       <div class="team-bottom-info text-center">
         <h4 class="content-title">Interested to Working With?</h4>
