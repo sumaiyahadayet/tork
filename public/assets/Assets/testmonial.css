@@ -1,0 +1,289 @@
+:root {
+    font-size: 16px
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    color: #999999
+}
+
+.portfolio-testimonial-area {
+    padding-top: 48px;
+}
+
+a,
+b,
+div,
+li,
+ul {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-outline-: none
+}
+
+a:active,
+a:focus,
+input,
+input:active,
+input:focus,
+input:hover,
+textarea,
+textarea:active,
+textarea:focus,
+textarea:hover {
+    -moz-outline: none;
+    outline: none
+}
+
+
+.portfolio-testimonial-slider {
+    -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 10px;
+    z-index: 4;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: calc(602px - 95px);
+}
+
+.portfolio-testimonial-slider .owl-stage-outer {
+    top: -95px;
+}
+
+.single-portfolio-testimonial {
+    position: relative
+}
+
+.portfolio-testimonial-content {
+    padding-top: 30px;
+}
+
+.testimonial-qoute-item {
+    border: 7px solid #5055fa;
+border-radius: 20px;
+padding: 50px 30px;
+position: relative;
+}
+
+.testimonial-qoute-item::before {
+    position: absolute;
+    font-family: "FontAwesome";
+    content: "\f10d";
+    font-weight: 900;
+    top: -20px;
+    left: -16px;
+    font-size: 50px;
+    padding:10px;
+    color: #b224ef;
+    background: #fff;
+    line-height: 1;
+}
+
+.portfolio-testimonial-details {
+    /* margin-bottom: 40px */
+}
+
+p:last-child {
+    margin-bottom: 0px
+}
+
+.portfolio-testimonial-details > p {
+    font-size: 1 rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7)
+}
+
+.portfolio-testimonial-wraper .star-lists {
+    /* margin-bottom: 30px */
+    text-align: center;
+padding-top: 10px;
+}
+
+li,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.portfolio-testimonial-wraper .star-lists > li:not(:last-child) {
+    margin-right: 2px
+}
+
+.list-inline > li:not(:last-child) {
+    margin-right: 10px
+}
+
+.list-inline > li {
+    display: inline-block
+}
+
+.star-lists > li {
+    color: #b224ef;
+    font-size: 0.9375rem
+}
+
+
+.testimonial-qoute-item::after {
+    position: absolute;
+    font-family: "FontAwesome";
+    content: "\f10e";
+    font-weight: 900;
+    bottom: -20px;
+    right: -17px;
+    font-size: 50px;
+    padding: 10px;
+    color: #b224ef;
+    background: #fff;
+    line-height: 1;
+}
+
+.portfolio-testimonial-info{
+    /* text-align: center; */
+}
+
+.owl-carousel .owl-item img {
+    width: auto
+}
+
+.portfolio-testimonial-info > img {
+    margin: 10px 0px
+}
+
+.portfolio-testimonial-info img{
+    /* margin: 0 auto; */
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    height: auto
+}
+
+p:last-child {
+    margin-bottom: 0px
+}
+
+.portfolio-testimonial-info > p {
+    color: rgba(0, 0, 0, 1);
+    font-size: 0.9375rem
+}
+
+.owl-carousel .owl-item img {
+    width: auto
+}
+
+.portfolio-testimonial-person > img {
+    margin-left: auto
+}
+
+.single-portfolio-testimonial .quote-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    pointer-events: none;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: -1
+}
+
+.vertical-dot .owl-dots {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.owl-dots {
+    text-align: center
+}
+
+.vertical-dot .owl-dots .owl-dot:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 12px
+}
+
+.owl-dots .owl-dot:not(:last-child) {
+    margin-right: 15px
+}
+
+.vertical-dot .owl-dots .owl-dot {
+    display: block
+}
+
+
+.owl-dots .owl-dot {
+    display: inline-block;
+    outline: none
+}
+
+.vertical-dot .owl-dots .owl-dot > span {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.owl-dots .owl-dot span {
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(192, 192, 192, 0.502);
+    width: 8px;
+    height: 8px;
+    position: relative;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.vertical-dot .owl-dots .owl-dot > span:before {
+    background: #1351f4;
+    background: -webkit-gradient(linear, left bottom, left top, from(#1351f4), to(#0727eb));
+    background: -webkit-linear-gradient(bottom, #1351f4 0%, #0727eb 100%);
+    background: -o-linear-gradient(bottom, #1351f4 0%, #0727eb 100%);
+    background: linear-gradient(0deg, #1351f4 0%, #0727eb 100%);
+    border: 0px;
+    width: 16px;
+    height: 16px;
+    z-index: -1;
+    top: -4px;
+    left: -4px
+}
+
+.owl-dots .owl-dot span:before {
+    position: absolute;
+    content: "";
+    top: -6px;
+    left: -6px;
+    border: 1px solid rgba(27, 209, 234, 0.502);
+    border-radius: 50%;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.owl-dots .owl-dot.active span:before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1)
+}
+.vertical-dot .owl-dots .owl-dot.active > span {
+    background-color: #FFFFFF
+}

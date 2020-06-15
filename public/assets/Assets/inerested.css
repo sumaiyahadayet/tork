@@ -1,0 +1,199 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.625;
+    color: #999999;
+}
+
+.calltoaction-area {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 102px 0
+}
+
+
+a,
+b,
+div,
+li,
+ul {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -moz-outline-: none
+}
+
+a:active,
+a:focus,
+input,
+input:active,
+input:focus,
+input:hover,
+textarea,
+textarea:active,
+textarea:focus,
+textarea:hover {
+    -moz-outline: none;
+    outline: none
+}
+
+
+.call-to-action {
+    position: relative;
+    z-index: 2
+}
+
+.call-to-action .content-title {
+    color: #FFFFFF;
+    margin-bottom: 35px
+}
+
+
+.content-title,
+h3 {
+    color: #000000;
+    font-size: 1.75rem;
+    font-weight: 700
+}
+
+.xs-title,
+a,
+h4 {
+    color: #000000
+}
+
+
+.xs-title,
+h4 {
+    font-size: 1.375rem;
+    font-weight: 600
+}
+
+h1, h2, h3, h4 {
+    font-family: "Work Sans", sans-serif;
+    letter-spacing: -.25px;
+}
+
+.btn-wraper .btn:not(:last-child) {
+    margin-right: 18px
+}
+
+.btn.style2 {
+    background-color: #22c8e5
+}
+
+.btn.style2:hover {
+    background-color: #1599b0
+}
+
+.btn.btn-primary {
+    background-color: #1bd1ea;
+}
+
+.btn.btn-primary:hover {
+    background-color: #109fb2
+}
+
+
+/* .btn:not([class*=btn-outline-]) {
+    border: 0px;
+    color: #FFFFFF;
+    background-color: #000000;
+    -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.08)
+} */
+
+a:active,
+a:focus,
+a:hover,
+a:visited {
+    text-decoration: none;
+    outline: 0
+}
+
+.btn {
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: .5px;
+    border-radius: 1.71875rem;
+    padding: 15px 50px;
+
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    white-space: normal
+}
+
+a {
+    text-decoration: none;
+    outline: 0
+}
+.btn.icon-right > i {
+    float: right;
+    line-height: 52px;
+    padding-left: 19px
+}
+
+.btn.style2 > i {
+    font-size: 1.125rem
+}
+
+.btn.btn-outline-secondary {
+    border-color: #22c8e5;
+    color: #FFFFFF;
+    border-width: 2px
+}
+
+.btn.btn-outline-secondary:hover {
+    background-color: #22c8e5
+}
+
+.call-to-action .btn-outline-secondary {
+    line-height: 52px
+}
+
+.calltoaction-area .xs-overlay {
+    opacity: .9
+}
+
+.call-to-action .btn{
+     padding: 0 50px;
+     line-height: 48px;
+}
+
+
+.gradient-bg {
+    background: #b224ef;
+    background: -webkit-linear-gradient(333deg, #b224ef 40%, #5055fa 100%);
+    background: -o-linear-gradient(333deg, #b224ef 40%, #5055fa 100%);
+    background: linear-gradient(117deg, #b224ef 40%, #5055fa 100%)
+}
+
+.xs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    z-index: 0
+}
+
+.btn.style2 {
+    background-color: #22c8e5;
+}
+
+.btn.btn-outline-secondary {
+    border-color: #22c8e5;
+    color: #FFFFFF;
+    border-width: 2px
+}

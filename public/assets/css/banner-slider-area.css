@@ -1,0 +1,64 @@
+.content-title{
+	margin-bottom: 40px;
+}
+.success-summary .nav .nav-item {
+	font-size: 20px;
+	color: #171f3c;
+	font-weight: 500;
+}
+.success-summary .nav .nav-item i{
+	color: #5055fa;
+}
+.success-summary-image{
+	position: relative;
+}
+.success-summary-image .poduct-video{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.success-summary-image .poduct-video a{
+	width: 90px;
+	height: 90px;
+	line-height: 96px;
+	text-align: center;
+	background:linear-gradient(119deg, #b224ef 11%, #5055fa 55%);
+	display: inline-block;
+	border-radius: 50%;
+	font-size: 25px;
+	color: #fff;
+	animation: white-shadow 2s linear infinite;
+}
+
+
+
+@keyframes white-shadow {
+  0% {
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  100% {
+    box-shadow: 0 0 0 50px transparent;
+    transition: box-shadow 0.4s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
+
+	}
+}
+
+.content-title.under-line:after,
+.content-title.under-line:before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(119deg, #b224ef 11%, #5055fa 55%);
+    left: 0;
+    bottom: -10px;
+}
+.content-title.under-line:before {
+	bottom:-17px;
+	width: 85px;
+	background: linear-gradient(119deg, #5055fa 11%, #b224ef 55%);
+}
