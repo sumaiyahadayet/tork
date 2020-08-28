@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 19, 2020 at 10:33 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Jun 21, 2020 at 05:04 PM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,6 +25,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(11) NOT NULL,
+  `description` text NOT NULL,
+  `url` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `description`, `url`, `created_at`, `deleted_at`) VALUES
+(2, 'yuyuyuyuy', 'https://www.youtube.com/embed/tyBELcbeT6Y', '2020-06-14 07:23:24', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `category`
 --
 
@@ -32,7 +53,7 @@ CREATE TABLE `category` (
   `id` int(100) NOT NULL,
   `title` varchar(191) DEFAULT NULL,
   `order` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -57,7 +78,7 @@ CREATE TABLE `employee` (
   `email` varchar(191) DEFAULT NULL,
   `address` varchar(191) DEFAULT NULL,
   `phone` varchar(191) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -91,7 +112,7 @@ CREATE TABLE `portfolio` (
   `image` varchar(200) DEFAULT NULL,
   `category` varchar(200) DEFAULT NULL,
   `order` int(11) DEFAULT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -100,9 +121,82 @@ CREATE TABLE `portfolio` (
 --
 
 INSERT INTO `portfolio` (`id`, `url`, `image`, `category`, `order`, `created_at`, `deleted_at`) VALUES
-(1, 'https://www.facebook.com/3', 'portfolio/GVqWew4EK0ZBDeL.PNG', 'large', NULL, '2020-05-19 19:07:55', NULL),
-(2, 'https://www.facebook.com/', 'portfolio/mJDfJB8KGQWhkeZ.PNG', 'small', NULL, '2020-05-19 19:07:55', NULL),
-(3, 'https://www.facebook.com/', 'portfolio/mKxRZIO9SBeOLDg.png', '8', NULL, '2020-05-19 19:45:02', NULL);
+(5, 'http://127.0.0.1:8000/admin/portfolio', 'portfolio/AmQq02GXnLorcPv.png', '8', NULL, '2020-06-12 21:21:08', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` int(191) NOT NULL,
+  `imageb` varchar(191) NOT NULL,
+  `urlb` varchar(191) NOT NULL,
+  `images` varchar(191) NOT NULL,
+  `urls` varchar(191) NOT NULL,
+  `type` int(11) NOT NULL,
+  `order` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `imageb`, `urlb`, `images`, `urls`, `type`, `order`, `created_at`, `deleted_at`) VALUES
+(1, 'portfolio/k9U2LnGAH0n7pug.png', 'http://127.0.0.1:8000/admin/add-projects', 'portfolio/fwTdxjcnE27xDpb.png', 'http://127.0.0.1:8000/admin/add-projects', 0, 1, '2020-06-12 20:56:28', NULL),
+(2, 'portfolio/wMk38jXZ0d1ovos.jpg', 'http://127.0.0.1:8000/admin/add-projects', 'portfolio/JOnleD58UfSPiU1.jpg', 'http://127.0.0.1:8000/admin/add-projects', 1, 2, '2020-06-12 20:58:57', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `section2`
+--
+
+CREATE TABLE `section2` (
+  `id` int(11) NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `title` varchar(191) NOT NULL,
+  `order` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `section2`
+--
+
+INSERT INTO `section2` (`id`, `image`, `title`, `order`, `created_at`, `deleted_at`) VALUES
+(1, 'portfolio/c1LnRAWrRhax2Yu.jpg', 'Test Title', 2, '2020-06-13 22:04:49', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team`
+--
+
+CREATE TABLE `team` (
+  `id` int(11) NOT NULL,
+  `image` varchar(191) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `job` varchar(191) NOT NULL,
+  `fb` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `instra` varchar(191) NOT NULL,
+  `linkedin` varchar(191) NOT NULL,
+  `ordr` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `team`
+--
+
+INSERT INTO `team` (`id`, `image`, `name`, `job`, `fb`, `email`, `instra`, `linkedin`, `ordr`, `created_at`, `deleted_at`) VALUES
+(1, 'portfolio/ipVw9svzJ9ulM9A.jpg', 'abc', 'kj', 'http://127.0.0.1:8000/admin/add-team', 'http://127.0.0.1:8000/admin/add-team', 'http://127.0.0.1:8000/admin/add-team', 'http://127.0.0.1:8000/admin/add-team', 3, '2020-06-12 21:13:53', NULL);
 
 -- --------------------------------------------------------
 
@@ -133,6 +227,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 --
 
 --
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `category`
 --
 ALTER TABLE `category`
@@ -157,6 +257,24 @@ ALTER TABLE `portfolio`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `section2`
+--
+ALTER TABLE `section2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `team`
+--
+ALTER TABLE `team`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -165,6 +283,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -188,7 +312,25 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `portfolio`
 --
 ALTER TABLE `portfolio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` int(191) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `section2`
+--
+ALTER TABLE `section2`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `team`
+--
+ALTER TABLE `team`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
